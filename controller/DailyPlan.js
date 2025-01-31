@@ -1,8 +1,12 @@
 const express= require('express')
-const dailyPlans=require("../SampleData") //import the sample data 
+const DailyPlanModel=require("../Model/Schema") 
 
 const getPlans=async(req,res)=>{
     try {
+      const dailyPlans = await DailyPlanModel.findOne(); // Fetch the daily plans from MongoDB
+      if (!dailyPlans) {
+        return res.status(404).json({ message: "No plans found" });
+      }
         res.json({
           week: "14-21",
           dailyPlans,
@@ -15,6 +19,10 @@ const getPlans=async(req,res)=>{
 const dayPlan=async (req,res)=>{
     try{
         const day = req.params.day;
+        const dailyPlans = await DailyPlanModel.findOne(); // Fetch the daily plans from MongoDB
+        if (!dailyPlans) {
+          return res.status(404).json({ message: "No plans found" });
+        }
         const dayIndex = dailyPlans.days.indexOf(day);
       
         if (dayIndex === -1) {
@@ -22,7 +30,7 @@ const dayPlan=async (req,res)=>{
         }
       
         const dayPlan = dailyPlans.plans.map(plan => ({
-          ...plan,
+          ...plan._doc,
           completed: plan.completed[dayIndex] // Show completion for that day
         }));
       
