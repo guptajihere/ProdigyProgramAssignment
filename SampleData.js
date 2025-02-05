@@ -6,7 +6,10 @@ const dailyPlans = {
         activity: "Advanced Mobility exercises",
         frequency: "Maximize",
         time: "Max",
-        completed: [false, false, false, false, false, false, false], // Track completion
+        w3: [true, true, false, false, false, false, false], // Track completion
+        w1:[]
+        w2
+        w4
       },
       {
         category: "Boosters",
@@ -20,50 +23,50 @@ const dailyPlans = {
         activity: "Visual Solfege",
         frequency: "1x/Day",
         time: "30 sec",
-        completed: [false, false, false, false, false, false, false],
+      //  completed: [false, false, false, false, false, false, false],
       },
       {
         category: "Memory",
         activity: "Auditory Memory (Song 2)",
         frequency: "1x/Day",
         time: "30 sec",
-        completed: [false, false, false, false, false, false, false],
+       // completed: [false, false, false, false, false, false, false],
       },
       {
         category: "Creativity",
         activity: "Auditory Magic (Set 2)",
         frequency: "2 sounds/day",
         time: "60 sec",
-        completed: [false, false, false, false, false, false, false],
+      //  completed: [false, false, false, false, false, false, false],
       },
       {
         category: "Languages",
         activity: "Talk, To Listen",
         frequency: "1x/Day",
         time: "60 sec",
-        completed: [false, false, false, false, false, false, false],
+       // completed: [false, false, false, false, false, false, false],
       },
       {
         category: "Athleticism",
         activity: "Finger Skills",
         frequency: "3x/Week",
         time: "60 sec",
-        completed: [false, false, false, false, false, false, false],
+      //  completed: [false, false, false, false, false, false, false],
       },
       {
         category: "Creativity",
         activity: "Stimulus Explosion",
         frequency: "2x/Week",
         time: "60 sec",
-        completed: [false, false, false, false, false, false, false],
+      //  completed: [false, false, false, false, false, false, false],
       },
       {
         
-            category: "Logic",
-            activity: "Foundations Of Logic(Quantity)",
-            frequency: "2x/Week",
-            time: "60 sec",
-            completed: [false, false, false, false, false, false, false],
+        category: "Logic",
+        activity: "Foundations Of Logic(Quantity)",
+        frequency: "2x/Week",
+        time: "60 sec",
+      //completed: [false, false, false, false, false, false, false],
       },
 
     ],

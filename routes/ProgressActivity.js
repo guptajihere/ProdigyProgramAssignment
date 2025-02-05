@@ -3,6 +3,6 @@ const updateProgressStatus=require("../controller/ProgressActivity");
 
 const router= express.Router()
 
-router.put('/day/:day/complete',updateProgressStatus)
+router.put('/complete',updateProgressStatus)
 
 module.exports = router;

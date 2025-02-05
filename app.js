@@ -7,7 +7,7 @@ const plansRoute = require('./routes/DailyPlan');
 const progressRoute = require('./routes/ProgressActivity');
 
 const app = express();
-app.use(express.json());
+app.use(express.json()); // parses incoming json requests
 app.use(cors());
 
 mongoose

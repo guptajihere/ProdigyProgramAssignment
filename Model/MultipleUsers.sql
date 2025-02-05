@@ -1,0 +1,22 @@
+-- CREATE TABLE users (
+--     id SERIAL PRIMARY KEY,
+--     name VARCHAR(50) NOT NULL
+-- );
+
+-- CREATE TABLE plans (
+--     id SERIAL PRIMARY KEY,
+--     category VARCHAR(50) NOT NULL,
+--     activity VARCHAR(100) NOT NULL,
+--     frequency VARCHAR(20) NOT NULL,
+--     time VARCHAR(20) NOT NULL
+-- );
+
+-- CREATE TABLE user_progress (
+--     id SERIAL PRIMARY KEY,
+--     user_id INT NOT NULL,
+--     plan_id INT NOT NULL,
+--     day VARCHAR(10) NOT NULL,
+--     completed BOOLEAN DEFAULT FALSE,
+--     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+--     FOREIGN KEY (plan_id) REFERENCES plans(id) ON DELETE CASCADE
+-- );
